@@ -9,7 +9,11 @@ app.use(cors());
 
 require('dotenv').config();
 
-app.use(cors());
+app.use(cors({
+    origin: [],
+    methods: ["POST", "GET"],
+    credentials: True,
+}));
 app.use(express.json());
 app.use(express.urlencoded());
 
